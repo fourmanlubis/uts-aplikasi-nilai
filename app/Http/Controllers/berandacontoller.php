@@ -29,7 +29,7 @@ class berandacontoller extends Controller
 
         Beranda::create([
             "user_id" => $request->user()->id,
-            "matakuliah_id" => $request->kategori,
+            "matakuliah_id" => $request->matakuliah,
             "nim" => $request->nim,
             "nilai" => $request->nilai
         ]);
@@ -48,13 +48,13 @@ class berandacontoller extends Controller
     public function update(Beranda $beranda,Request $request){
         $request->validate([
             "nama" => "required",
-            "" => "required|min:50|max:255",
-            "isi" => "required|min:100"
+            "matakuliah" => "required|min:5|max:55",
+            "nilai" => "required|"
         ]);
 
-        $berita->update([
+        $beranda->update([
             "user_id" => $request->user()->id,
-            "matakuliah_id" => $request->kategori,
+            "matakuliah_id" => $request->matakuliah,
             "nim" => $request->nim,
             "nilai" => $request->nilai
         ]);

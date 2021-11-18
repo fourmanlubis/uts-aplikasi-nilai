@@ -12,7 +12,7 @@ class mahasiswa extends Model
 
     protected $table="tblmahasiswa";
 
-    protected $fillable = ["nama","nim","matakuliah","user_id"];
+    protected $fillable = ["nim","nama","alamat","telepon","email"];
 
     /**
      * Get the user that owns the Komentar
