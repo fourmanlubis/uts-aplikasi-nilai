@@ -77,6 +77,6 @@ class berandacontoller extends Controller
             "user_id" => $request->user()->id
         ]);
 
-        return redirect()->route('detail.beranda',["beranda_id" => $request->beranda_id]);
+        return redirect()->route('detail.beranda',["beranda" => $request->beranda]);
     }
 }

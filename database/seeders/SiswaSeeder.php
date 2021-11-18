@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 
 class SiswaSeeder extends Seeder
 {
+    
     /**
      * Run the database seeds.
      *
@@ -13,6 +14,8 @@ class SiswaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
+        \App\Models\Beranda::truncate();
+        \App\Models\Beranda::factory()->count(10)->create();
     }
 }
