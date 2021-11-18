@@ -21,7 +21,7 @@ class SiswaFactory extends Factory
         return [
             
             
-             "Nim" => $this->faker->sentence(10),
+            "nim" => $this->faker->sentence(10),
             "matakuliah_id" => $this->faker->text(20),
             "nilai" => \App\Models\Kategori::get("id")->random(),
             
